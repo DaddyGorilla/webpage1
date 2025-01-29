@@ -1,6 +1,7 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.querySelectorAll('.nav-button');
     const sections = document.querySelectorAll('.content-section');
+    const servicesButton = document.getElementById('servicesButton');
 
     function showSection(targetId) {
         sections.forEach(section => {
@@ -13,10 +14,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     buttons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
+        button.addEventListener('click', function (e) {
             const targetId = this.getAttribute('data-target');
             if (targetId) {
+                e.preventDefault(); // Prevent default only for buttons with data-target
                 showSection(targetId);
                 buttons.forEach(btn => btn.classList.remove('active'));
                 this.classList.add('active');
@@ -24,16 +25,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Show home section by default
-    showSection('home');
-    document.querySelector('[data-target="home"]').classList.add('active');
-
-    // Handle form submission
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Form submitted! (This is a placeholder action)');
+    // Handle Services button click
+    if (servicesButton) {
+        servicesButton.addEventListener('click', function () {
+            window.location.href = 'services.html'; // Navigate to services.html
         });
     }
+
+    // Show home section by default
+    showSection('home');
 });
