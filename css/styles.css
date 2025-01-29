@@ -20,7 +20,7 @@ header h1 {
     margin: 0;
     font-size: 2.5rem;
     font-weight: 600;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .button-container {
@@ -43,10 +43,11 @@ header h1 {
     text-decoration: none;
 }
 
-.nav-button:hover, .nav-button.active {
+.nav-button:hover,
+.nav-button.active {
     background: rgba(255, 255, 255, 0.2);
     transform: scale(1.05);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .content-section {
@@ -56,13 +57,19 @@ header h1 {
     margin: 2rem auto;
     max-width: 800px;
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.5s ease;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .content-section.active {
@@ -90,12 +97,48 @@ header h1 {
     padding: 30px;
     border-radius: 10px;
     transition: all 0.3s ease;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .portfolio-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Services Page Styles */
+.services-list {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.services-list.visible {
+    display: block;
+    opacity: 1;
+}
+
+.services-list li {
+    background: #f9f9f9;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.services-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.services-list h3 {
+    color: #6a11cb;
+    margin-bottom: 10px;
+}
+
+.services-list p {
+    color: #555;
+    line-height: 1.6;
 }
 
 /* Footer */
