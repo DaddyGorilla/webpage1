@@ -12,16 +12,25 @@
         <h1>Welcome to My Website</h1>
         <nav class="button-container">
             <button class="nav-button" data-target="home">Home</button>
-            <a href="services.html" class="nav-button">Services</a>
+            <button class="nav-button" data-target="services">Services</button>
             <button class="nav-button" data-target="portfolio">Portfolio</button>
             <button class="nav-button" data-target="about">About Me</button>
             <button class="nav-button" data-target="contact">Contact</button>
         </nav>
     </header>
     <main>
-        <section id="home" class="content-section">
+        <section id="home" class="content-section active">
             <h2>Home</h2>
             <p>Welcome to my website! I help businesses leverage their potential customer return rate.</p>
+        </section>
+        <section id="services" class="content-section">
+            <h2>Services</h2>
+            <p>Check out the services we offer:</p>
+            <ul class="services-list">
+                <li>Website Design</li>
+                <li>SEO Optimization</li>
+                <li>Customer Retention Strategies</li>
+            </ul>
         </section>
         <section id="portfolio" class="content-section">
             <h2>Portfolio</h2>
